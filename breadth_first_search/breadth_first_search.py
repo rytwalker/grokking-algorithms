@@ -12,7 +12,9 @@
 
 from collections import deque
 
-graph = {}
+graph = {
+    "you": ["alice", "bob", "steve"]
+}
 
 graph["you"] = ["alice", "bob", "claire"]
 graph["bob"] = ["anuj", "peggy"]
@@ -25,7 +27,7 @@ graph["jonny"] = []
 
 
 def search(name):
-    # creates a new queue
+    # creates a new queue O(n)
     search_queue = deque()
     # Adds all of your neighbors to the search queue
     search_queue += graph[name]
